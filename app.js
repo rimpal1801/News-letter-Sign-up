@@ -27,11 +27,11 @@ merge_fields:{
   ]
 };
 const jsonData = JSON.stringify(data);
-const url = "https://us6.api.mailchimp.com/3.0/lists/f5ad87d453";
+const url = "https://us6.api.mailchimp.com/3.0/lists/ ListID ?skip_merge_validation=true&skip_duplicate_check=true"
 
 const options ={
   method: "POST",
-  auth:"rimple:72a8e894c8fab391dca3ca42bb456738-us6"
+  auth:"Rimpal: API-Key "
 }
 const request = https.request(url , options , function(response){
 if(response.statusCode === 200){
@@ -53,3 +53,6 @@ app.post("/failure" , function(req,res){
 app.listen(process.env.PORT || 3000 , function(){
   console.log("server is running on port 3000");
 });
+
+//API Key: Check from the local database on PC
+// List ID: Check from the local database on PC
